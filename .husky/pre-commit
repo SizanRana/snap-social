@@ -1,0 +1,22 @@
+echo '🏗️👷 Testing lint and building your project before committing'
+
+# Check ESLint Standards
+yarn lint-staged ||
+(
+    echo 'ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
+    false; 
+)
+
+# Skipping build for now
+# If everything passes... Now we can commit
+echo '🤔🤔🤔🤔... Alright.... Code looks good... Trying to build now. 🤔🤔🤔🤔'
+
+yarn build ||
+(
+    echo '❌👷🔨❌ Better call Bob... Because your build failed ❌👷🔨❌
+          yarn build failed: View the errors above to see why.'
+    false;
+)
+
+# If everything passes... Now we can commit
+echo '✅✅✅✅ Comitting codes... ✅✅✅✅'
