@@ -1,10 +1,13 @@
 import { JSX } from "react";
-import Login from "./Login";
+import HomeFeed from "../home/HomeFeed";
 
 export default async function Home(): Promise<JSX.Element> {
   return (
-    <main>
-      <Login />
+    <main className="w-full">
+      <div className="dark">
+        {/* <Login /> */}
+        <HomeFeed />
+      </div>
     </main>
   );
 }

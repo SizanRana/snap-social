@@ -8,7 +8,7 @@ const InputBase: React.FC<React.InputHTMLAttributes<HTMLInputElement>> = (
   return (
     <input
       className={twMerge(
-        "outline-none border border-gray-600 p-2 rounded-sm w-full",
+        "outline-none border border-gray-600 px-2 py-1 rounded-sm w-full",
         className,
       )}
       {...rest}

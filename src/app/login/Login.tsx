@@ -1,3 +1,4 @@
+import Button from "@/widgets/button/Button";
 import Hr from "@/widgets/hr/Hr";
 import LoginInput from "@/widgets/input/LoginInput";
 import Caption from "@/widgets/typography/Caption";
@@ -6,18 +7,24 @@ import React from "react";
 
 const Login: React.FC = () => {
   return (
-    <div className="h-screen w-full flex items-center justify-center">
-      <div className="border border-gray-600 px-12 pt-10 pb-8">
+    <div className="w-full flex items-center justify-center">
+      <div className="max-w-[350px] mt-[29px] border border-gray-600 px-12 pt-10 pb-8 space-y-7">
         <H3 className="text-center">Snap-Social</H3>
 
-        <div className="mt-7 space-y-4">
+        <div className="space-y-4">
           <LoginInput placeholder="Email" type="email" />
           <LoginInput placeholder="Password" type="password" />
         </div>
 
-        <div className="mt-7 flex items-center space-x-4">
+        <Button>Log in</Button>
+
+        <div className="flex items-center space-x-4">
           <Hr /> <Caption>OR</Caption> <Hr />
         </div>
+
+        <Caption className="cursor-pointer text-center">
+          Forgot Password?
+        </Caption>
       </div>
     </div>
   );

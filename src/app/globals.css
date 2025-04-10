@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+@theme {
+  --color-charcoal: #363636;
+  --color-hover-gray: #1a1a1a;
+}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { JSX } from "react";
+import { twMerge } from "tailwind-merge";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -20,7 +21,9 @@ export default function RootLayout({
 }>): JSX.Element {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} antialiased bg-black text-white`}>
+      <body
+        className={twMerge(dmSans.variable, "antialiased bg-black text-white")}
+      >
         {children}
       </body>
     </html>

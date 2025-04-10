@@ -6,7 +6,7 @@ const Hr: React.FC<React.HTMLAttributes<HTMLHRElement>> = (props) => {
 
   return (
     <hr
-      className={twMerge("border-0.5 border-gray-600 w-full", className)}
+      className={twMerge("border-0.5 border-charcoal w-full", className)}
       {...rest}
     />
   );
